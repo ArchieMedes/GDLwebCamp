@@ -1,0 +1,1052 @@
+/*! HTML5 Boilerplate v7.3.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 62.5% */
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f2f2f2;
+}
+
+h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size:  2.4rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h2::after {
+  content: ''; /* esta linea es de ley */
+  margin: 0 auto; /* para centrar */
+  background-image: url(../img/separador.png);
+  height: 3rem;
+  width: 10rem;
+  display: block;
+}
+
+h3 {
+  font-size: 1.8rem;
+  font-family: 'PT Sans', sans-serif;
+  margin: 0;
+}
+
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.seccion {
+  padding: 3rem 0;
+}
+
+.seccion p {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.contenedor {
+  max-width: 992px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+@media (min-width: 768px) {
+  .contenedor {
+    width: 100%;
+  }
+}
+
+.button.hollow,
+.button.hollow:hover {
+  background-color: white;
+  color: #fe4918;
+  border: 1px solid #fe4918;
+}
+
+.button.transparente {
+  background-color: transparent;
+  border: 2px solid white;
+}
+
+
+.button.transparente:hover {
+  border: 2px solid #fe4918;
+}
+
+/* ------------------------------- HEADER ----------------------------------- */
+
+.hero {
+  background-image: url(../img/encabezado.jpg);
+  height: 100vh; /* Para ocupar el tamaño de TODA LA VENTANA */
+  background-size: cover; /* Para usar TODA LA IMAGEN */
+  background-position: center; /* Para CENTRAR la imagen */
+}
+
+.contenido-header {
+  padding-top: 4rem;
+}
+
+@media (min-width: 768px) {
+  .contenido-header {
+    padding-top: 1rem;
+  }
+}
+
+.redes-sociales {
+  text-align: center;
+}
+
+.redes-sociales a {
+  color: white;
+  font-size: 3rem;
+  margin-right: 2rem;
+}
+
+.redes-sociales a:last-child {
+  margin-right: 0;
+}
+
+.informacion-evento {
+  text-align: center;
+  color: white;
+  margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .informacion-evento {
+    width: 70%;
+    margin: 5rem auto;
+  }
+  
+}
+
+.informacion-evento p {
+  margin: 0;
+  display: inline;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+/* ICONOS: CALENDARIO y MAPA */
+.informacion-evento i {
+  color: #fe4918;
+  font-size: 2.5rem;
+}
+
+.fecha {
+  float: left;
+}
+
+.ciudad {
+  float: right;
+  text-align: right;
+}
+
+.nombre-sitio {
+  font-size: 4.5vw;
+  font-family: 'PT Sans', sans-serif;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .nombre-sitio {
+    
+    font-size: 11vw;
+    margin: 0;
+    line-height: 1; /* para cerrar el interlineado */
+  }
+}
+
+.slogan {
+  text-transform: none!important;
+}
+
+.slogan span {
+  font-weight: bold;
+}
+
+/* -------------------- BARRA MENU: NAVEGACION ----------------------- */
+
+.barra {
+  background-color: #353535;
+  padding: 2rem 0;
+}
+
+.logo {
+  width: 80%;
+  float: left;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    width: 33%;
+  }
+}
+
+.logo img {
+  width: 100%;
+}
+
+
+
+/* --------------- NAVEGACION PRINCIPAL: MOVIL --*/
+
+.navegacion-principal {
+  display: none; /* ESTO ES PARA OCULTARLO */
+}
+
+
+.navegacion-principal a {
+  font-family: 'Oswald', sans-serif;
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
+  text-transform: uppercase;
+  transition: background-color .3s ease-in-out;
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.navegacion-principal a:hover {
+  background-color: #fe4918;
+}
+
+.navegacion-principal a:last-child {
+  border: 2px solid #fe4918;
+  color: #fe4918;
+}
+
+.navegacion-principal a:last-child:hover {
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .navegacion-principal {
+    display: block; /* PARA QUE APAREZCA*/
+    width: 67%;
+    float: right;
+    text-align: right;
+  }
+
+  .navegacion-principal a {
+    line-height: 2;
+    display: inline-block;
+    padding: 0 1rem;
+    width: auto; /* lo dejamos en auto para recuperar la distribucion horizontal */
+    text-align: center;
+    margin: 0 1rem 0 0;
+    padding-top: .5rem;
+  }
+  
+}
+
+/* --- MENU MOVIL ---- */
+.menu-movil {
+  width: 6rem;
+  display: block;
+  float: right;
+  text-align: right;
+  margin-top: 1.2rem;
+}
+
+.menu-movil:hover {
+  cursor: pointer;
+}
+
+/* simulando un icono de hamburguesa */
+.menu-movil span {
+  height: 8px;
+  margin-bottom: 6px;
+  background-color: white;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .menu-movil {
+    display: none;
+  }
+  
+}
+
+/* --------------------- SECTION: PROGRAMA --------------------- */
+
+.programa {
+  position: relative; /* PADRE EN RELATIVE */
+}
+
+
+.contenedor-video {
+  max-width: 100%;
+  overflow-x: hidden; /* en caso de que el video se pase, no se crea un scroll a la derecha */
+}
+
+
+/*
+.contenedor-video video {
+  max-width: 100%;
+}
+*/
+
+.contenido-programa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.programa-evento {
+  background-color: rgba(255, 255, 255, .8);
+  padding: 1.5rem;
+  margin-top: 5rem;
+}
+
+@media (min-width: 768px) {
+  .programa-evento {
+    width: 70%;
+  }
+  
+}
+
+@media (min-width: 992px) {
+  .programa-evento {
+    width: 50%;
+  }
+}
+
+.menu-programa {
+  width: 100%;
+  border-bottom: .1rem solid #fe4918;
+  padding: .1rem;
+  display: block;
+}
+
+.menu-programa a {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  text-decoration: none;
+  color: black;
+  font-family: 'Oswald', sans-serif;
+  margin-bottom: .1rem;
+  font-size: 2rem;
+}
+
+.menu-programa a i,
+.detalle-evento p i,
+.detalle-evento h3 {
+  color: #fe4918;
+  margin-right: .5rem;
+  font-size: 1rem;
+}
+
+.detalle-evento h3 {
+  font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+  .menu-programa {
+    display: flex;
+  } 
+}
+
+/* -- detalle evento --*/
+.detalle-evento {
+  margin-top: 2rem;
+  border-bottom: .1rem solid black;
+  padding: 0 2rem;
+}
+
+.detalle-evento:last-of-type {
+  border-bottom: none;
+}
+
+.detalle-evento p {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.button {
+  text-decoration: none;
+  background-color: #fe4918;
+  padding: 1rem 4rem;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  display: inline-block;
+  transition: background-color .3s ease-in-out;
+}
+
+.button:hover {
+  background-color: #e33000;
+}
+
+.float-right {
+  float: right;
+}
+
+
+/* ------------------- INVITADOS ----------------------------------- */
+
+.lista-invitados li {
+  padding: 1rem;
+  float: left;
+}
+
+@media (min-width: 480px) {
+  .lista-invitados li {
+    width: 50%;  
+  }
+}
+
+@media (min-width: 768px) {
+  .lista-invitados li {
+    width: 33.3%;
+  }
+}
+
+.invitado {
+  position: relative;
+  overflow: hidden;
+}
+
+.invitado img {
+  max-width: 100%;
+  filter: gray; /* para Internet Explorer */
+  -webkit-filter: grayscale(1); /* -webkit- es para chrome mayormente. puede tener como argumentos un (1)*/
+  -webkit-transition: all .5s ease-in-out;
+}
+
+.invitado:hover img {
+  -webkit-filter: grayscale(0);
+  -webkit-transform: scale(1.1); /* para hacer efecto de zoom */
+}
+
+.invitado p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 1.5rem 1rem;
+  margin: 0;
+  background-color: rgba(0, 0, 0, .5);
+  width: 100%;
+  text-align: left;
+  font-family: 'Oswald', sans-serif;
+  font-size: 2rem;
+  color: #e33000;
+  text-transform: uppercase;
+  transition: all .5s ease-in-out;
+}
+
+.invitado:hover p {
+  bottom: -80px;
+  opacity: 0;
+}
+
+/* ------------------------ CONTADOR ------------------------- */
+.parallax::before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; /* ESTE ES EL PARALLAX */
+
+  -webkit-filter: brightness(.8);
+  filter: brightness(.8);
+}
+
+.contador {
+  position: relative;
+  height: auto;
+}
+
+.contador::before {
+  background-image: url(../img/bg-resumen.jpg);
+  content: '';
+}
+
+.resumen-evento {
+  position: relative;
+  padding: 12rem 0;
+}
+
+.resumen-evento li {
+  width: 50%;
+  float: left;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-size: 3rem;
+}
+
+@media (min-width: 768px) {
+  .resumen-evento li {
+    width: 25%;
+  }
+}
+
+.numero {
+  color: #fe4918;
+  font-size: 8rem!important;
+  display: block;
+  margin: 0 0 1rem 0;
+  font-family: 'Oswald', sans-serif;
+}
+
+/* ---------------------------- PRECIOS: TABLA DE PRECIOS -------------------------------- */
+.precios h2 {
+  margin-bottom: 4.5rem;
+}
+
+.lista-precios {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .lista-precios {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.lista-precios > li { /* ">" para indicar que afecta al hijo más directo, no nietos */
+  padding: 1rem;
+  background-color: white;
+  padding: 1rem 6rem;
+  text-align: center;
+  margin-bottom: 4rem;
+  border: 1px solid #e1e1e1;
+  transition: all .3s ease-in-out;
+}
+
+.lista-precios > li:hover {
+  transform: scale(1.1);
+  border: 1px solid #fe4918;
+  box-shadow: 0 0 5rem #666;
+}
+
+@media (min-width: 768px) {
+  .lista-precios > li {
+    display: inline-block;
+  }
+}
+
+
+.tabla-precio h3 {
+  color: #fe4918;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+}
+
+.tabla-precio .numero {
+  color: black;
+  margin-bottom: 0;
+  font-family: 'Oswald', sans-serif;
+  margin-top: 2rem;
+}
+
+.tabla-precio p {
+  font-size: 8rem;
+}
+
+.tabla-precio ul {
+  text-align: center;
+  font-size: 1.8rem;
+  font-family: 'Oswald', sans-serif;
+  margin-bottom: 2rem;
+  line-height: 4.5rem;
+  text-transform: uppercase;
+}
+
+.tabla-precio i {
+  color: green;
+}
+
+/* ---------------------- MAPA --- */
+
+.mapa-contenedor {
+  border: 1px solid #666;
+}
+
+/* ------------------------ TESTIMONIALES --*/
+.testimoniales {
+  padding-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .testimoniales {
+    display: flex;
+  }
+}
+
+.testimonial {
+  padding: .5rem
+}
+
+blockquote {
+  background-color: white;
+  border: 1px solid #e1e1e1;
+  position: relative;
+  margin: 0 0 1rem 0;
+  padding-bottom: 2rem;
+}
+
+blockquote p {
+  text-align: left !important;
+  font-size: 1.4rem !important;
+  font-family: 'PT Sans', sans-serif;
+  padding: 0 2rem 0 6.5rem;
+}
+
+@media (min-width: 768px) {  
+  .testimonial {
+    display: flex;
+    flex-basis: calc(33.3% - 1rem);
+  }  
+}
+
+blockquote i {
+  position: absolute;
+  left: 1.7rem;
+  top: 1rem;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  color: #fe4918;
+  font-size: 3rem;
+}
+
+.info-testimonial {
+  padding: 0;
+  display: flex;
+}
+
+.info-testimonial img {
+  max-width: 100%;
+  display: inline-block;
+  width: 20%;
+  border-radius: 50%;
+  margin-left: 2.5rem;
+  margin-right: 1.2rem;
+}
+
+.info-testimonial cite {
+  text-align: left;
+  color: #fe4918;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  width: 66.6%;
+  display: inline-block;
+  justify-content: end;
+  margin-left: 1.6rem;
+  margin-top: 1.2rem;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.info-testimonial span {
+  color: black;
+  text-transform: none;
+  display: inline-block;
+  margin-top: .5rem;
+}
+
+/* ------------------- NEWSLETTER ---- */
+.newsletter {
+  position: relative;
+  height: auto;
+  background-image: url(../img/bg-newsletter.jpg);
+  background-size: cover;
+
+
+  background-attachment: fixed; /* ESTE ES EL PARALLAX */
+
+}
+
+
+.newsletter .contenido {
+  padding: 10rem 0;
+  color: white;
+  text-align: center;
+}
+
+.newsletter .contenido p {
+  font-size: 2rem;
+  color: white;
+}
+
+.newsletter .contenido h3 {
+  text-transform: uppercase;
+  font-size: 7vw;
+  font-family: 'PT Sans', sans-serif;
+}
+
+/* ------------ CUENTA REGRESIVA ---------- */
+.cuenta-regresiva {
+  display: inline-block;
+  margin: 4rem 0 0 0;
+
+}
+
+.cuenta-regresiva ul {
+  margin-left: 4rem;
+}
+
+@media (min-width: 768px) {
+  .cuenta-regresiva ul {
+    margin: 0
+  }
+  .cuenta-regresiva {
+    display: block;
+    margin: 6rem auto;
+  }
+
+}
+
+.cuenta-regresiva ul li {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+  .cuenta-regresiva ul {
+    display: flex;
+
+  }
+}
+
+/* ------------------ FOOTER ----------- */
+.site-footer {
+  background-color: #353535;
+  padding-top: 3rem;
+  color:white;
+  margin: 0;
+}
+
+.site-footer h3 {
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+}
+
+.site-footer span {
+  color: #fe4918;
+}
+
+@media (min-width: 768px) {
+  .site-footer .contenedor {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .site-footer .tercia {
+    width: calc(33.3% - 2rem);
+  }
+}
+
+.ultimos-tweets ul {
+  margin-top: 1rem;
+}
+
+.ultimos-tweets ul li {
+  margin-bottom: 1rem;
+}
+
+/* copyright */
+.copyright {
+  display: block;
+  background-color: #2e2e2e;
+  color: white;
+  text-align: center;
+  padding: 1.2rem 0;
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+  display: none !important;
+}
+
+/*
+* Hide only visually, but have it available for screen readers:
+* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*
+* 1. For long content, line feeds are not interpreted as spaces and small width
+*    causes content to wrap 1 word per line:
+*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+*/
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+* Extends the .sr-only class to allow the element
+* to be focusable when navigated to via the keyboard:
+* https://www.drupal.org/node/897638
+*/
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+* Hide visually and from screen readers, but maintain layout
+*/
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    `contenteditable` attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /*
+     * Printing Tables:
+     * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
