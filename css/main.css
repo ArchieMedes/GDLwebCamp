@@ -255,8 +255,7 @@ ul {
 
 @media (min-width: 768px) {
   .nombre-sitio {
-    
-    font-size: 11vw;
+    font-size: 16rem;
     margin: 0;
     line-height: 1; /* para cerrar el interlineado */
   }
@@ -882,8 +881,160 @@ blockquote i {
   margin-bottom: 0;
 }
 
+/* ---------------------------------- PÁGINAS INTERNAS ------------------------------ */
+
+/* ------------ REGISTRO.HTML */
+.paquetes > h3 {
+  font-size: 2.3rem;
+}
+
+.registro h3 {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 2rem 0 0 0;
+  color: #fe4918;
+}
+
+.paquetes .lista-precios {
+  margin-top: 2.5rem;
+}
+
+.registro label {
+  margin-bottom: .5rem;
+  font-weight: bold;
+}
+
+.eventos > h3 {
+  font-size: 2.3rem;
+}
+
+h4 {
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 2px solid #fe4918;
+  padding-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.caja {
+  background-color: white;
+  border: 1px solid #e1e1e1;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.campo {
+  padding: 2rem;
+
+}
+
+@media (min-width: 768px) {
+  #datos_usuario {
+    display: flex;
+    justify-content: space-between;
+
+  } 
+}
+
+.paquetes .lista-precios > li:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.paquetes .tabla-precio input {
+  clear: both; /* para que se ponga debajo aunque creo no es necesario, si lo borras no pasa na*/
+  width: 100px;
+  margin: 10px auto 0 auto;
+  display: block;
+}
+
+.contenido-dia {
+  padding: 20px;
+  /*display: none;*/
+
+}
+
+.contenido-dia {
+  display: block;
+}
+
+.third-part {
+  text-align: center;
+}
+
+.third-part label {
+  display: block;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.third-part input {
+  margin-right: 1rem;
+}
+
+.third-part time {
+  color: #fe4918;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .talleres-conferencias-seminarios {
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  .third-part {
+    flex-basis: calc(33.3% - 1rem);
+
+  }
+}
 
 
+/* ---------------------------- RESUMEN REGISTRO */
+
+.resumen > h3 {
+  font-size: 2.3rem;
+}
+
+.resumen p {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.caja-extras {
+  display: flex;
+}
+
+.caja-extra {
+  padding: 2rem;
+}
+
+.orden {
+  margin-bottom: 1.5rem;
+}
+
+.orden label {
+  display: inline-block;
+  margin: 1rem 0;
+}
+.orden input {
+  display: block;
+  width: 15rem;
+}
+@media (min-width: 768px) {
+  .caja-extra {
+    flex-basis: calc(50% - 1rem);
+  }
+  .caja-extra p:first-of-type {
+    padding-top: 7rem;
+    
+  } 
+}
+
+.total input {
+  display: block;
+  margin: 10px auto;
+}
 
 /* ==========================================================================
    Helper classes
