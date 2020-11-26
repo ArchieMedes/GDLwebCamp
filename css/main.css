@@ -1036,6 +1036,18 @@ h4 {
   margin: 10px auto;
 }
 
+#lista_productos {
+  background-color: #e1e1e1;
+  padding: 2rem;
+  display: none; /* HASTA QUE SE PRESNETA UN EVENTO Y SE EJECUTA LA FUNCIÓN EN JAVASCRIPT, DENTRO DE LA FUNCIÓN EL DISPLAY CAMBIA A "BLOCK" Y ENTONCES SE MOSTRARÁ! MIENTRAS NO */
+}
+
+#suma_total {
+  text-align: center;
+  font-size: 2rem;
+  color: #fe4918;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
