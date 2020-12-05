@@ -423,7 +423,6 @@ ul {
 .menu-programa {
   width: 100%;
   border-bottom: .1rem solid #fe4918;
-  padding: .1rem;
   display: block;
 }
 
@@ -436,6 +435,22 @@ ul {
   font-family: 'Oswald', sans-serif;
   margin-bottom: .1rem;
   font-size: 2rem;
+  position: relative;
+  padding: .1rem;
+}
+
+.menu-programa a.activo::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  height: 20px;
+  width: 30px;
+  background-image: url(../img/talleres-flecha.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  bottom: -21px;
 }
 
 .menu-programa a i,
@@ -950,13 +965,9 @@ h4 {
 
 .contenido-dia {
   padding: 20px;
-  /*display: none;*/
-
+  display: none; 
 }
 
-.contenido-dia {
-  display: block;
-}
 
 .third-part {
   text-align: center;
@@ -1047,6 +1058,11 @@ h4 {
   font-size: 2rem;
   color: #fe4918;
 }
+
+input[disabled].button {
+  opacity: .5
+}
+
 
 /* ==========================================================================
    Helper classes

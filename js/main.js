@@ -32,6 +32,83 @@
 
         calcular.addEventListener('click', calcularMontos); // cuando el USUARIO de click en CALCULAR se ejecutará una función (puede ser anńoima o no, pero es el segundo parámetro)
         
+          
+
+        pase_dia.addEventListener('blur', mostrarDias); // BLUR nos ayuda a acceder y mantener EL VALOR de un ELEMENTO en específico. checa la función MOSTRARDIAS más abajo
+        pase_dosdias.addEventListener('blur', mostrarDias);
+        pase_completo.addEventListener('blur', mostrarDias);
+
+        // nombre.addEventListener('blur', function() {
+        //     if(this.value == '') {
+        //         errorDiv.style.display = 'block';
+        //         errorDiv.innerHTML = "*Este campo es obligatorio"
+        //         this.style.border = '1px solid red';
+        //         errorDiv.style.color = 'red';
+        //     }
+        //     else {
+        //         errorDiv.style.display = 'none'; // para cuando el usuario llene el recuadro NO MOSTRAR EL MARGEN ROJO NI EL MENSAJE DE ERROR
+        //         this.style.border = '1px solid #ccc'; // NO MOSRAR EL MARGEN ROJO
+        //     }
+        // })
+
+        // apellido.addEventListener('blur', function() {
+        //     if(this.value == '') {
+        //         errorDiv.style.display = 'block';
+        //         errorDiv.innerHTML = "*Este campo es obligatorio"
+        //         this.style.border = '1px solid red';
+        //         errorDiv.style.color = 'red';
+        //     }
+        //     else {
+        //         errorDiv.style.display = 'none'; // para cuando el usuario llene el recuadro NO MOSTRAR EL MARGEN ROJO NI EL MENSAJE DE ERROR
+        //         this.style.border = '1px solid #ccc'; // NO MOSRAR EL MARGEN ROJO
+        //     }
+        // })
+
+        // email.addEventListener('blur', function() {
+        //     if(this.value == '') {
+        //         errorDiv.style.display = 'block';
+        //         errorDiv.innerHTML = "*Este campo es obligatorio"
+        //         this.style.border = '1px solid red';
+        //         errorDiv.style.color = 'red';
+        //     }
+        //     else {
+        //         errorDiv.style.display = 'none'; // para cuando el usuario llene el recuadro NO MOSTRAR EL MARGEN ROJO NI EL MENSAJE DE ERROR
+        //         this.style.border = '1px solid #ccc'; // NO MOSRAR EL MARGEN ROJO
+        //     }
+        // })
+
+        nombre.addEventListener('blur', validarCampos);
+        apellido.addEventListener('blur', validarCampos);
+        email.addEventListener('blur', validarCampos);
+
+        email.addEventListener('blur', validarMail);
+
+        function validarCampos() {
+            if(this.value == '') {
+                errorDiv.style.display = 'block';
+                errorDiv.innerHTML = "*Este campo es obligatorio"
+                this.style.border = '1px solid red';
+                errorDiv.style.color = 'red';
+            }
+            else {
+                errorDiv.style.display = 'none'; // para cuando el usuario llene el recuadro NO MOSTRAR EL MARGEN ROJO NI EL MENSAJE DE ERROR
+                this.style.border = '1px solid #ccc'; // NO MOSRAR EL MARGEN ROJO
+            }
+        }
+
+        function validarMail() {
+            if(this.value.indexOf("@") > -1) { // si indexOf es falso reresa un -1, por tanto validamos con un mayor que -1
+                errorDiv.style.display = 'none'; // para cuando el usuario llene el recuadro NO MOSTRAR EL MARGEN ROJO NI EL MENSAJE DE ERROR
+                this.style.border = '1px solid #ccc';
+            }
+            else {
+                errorDiv.style.display = 'block';
+                errorDiv.innerHTML = "*Debe ser un correo válido"
+                this.style.border = '1px solid red';
+                errorDiv.style.color = 'red';
+            }
+        }
+
         function calcularMontos(event) { // el event es para usar el método preventDefault();
             event.preventDefault();
             // console.log('Has hecho click en calcular'); // para comprobar si el addeventlistener y la función se estan comunicando bien
@@ -85,9 +162,55 @@
                 suma.innerHTML = '$' + totalPagar.toFixed(2); // toFixed nos ayuda a devolver la CANTIDAD DE DECIMALES según la pasemos por PARÁMETRO (2 en este caso)
 
             }
+        } // CIERRE FUNCION: CALCULAR MONTOS
+
+        function mostrarDias() {
+            // console.log(pase_dia.value);
+            var boletosDia = parseInt(pase_dia.value, 10) || 0, // el 10 SIGNIFICA: base decimal, Y EL "OR" y 0 no sé jaja pero así va):
+                boletos2Dias = parseInt(pase_dosdias.value, 10) || 0,
+                boletosCompletos = parseInt(pase_completo.value, 10) || 0;
+            
+            var diasElegidos = [];
+
+            if(boletosDia > 0) {
+                diasElegidos.push('viernes');
+                console.log(diasElegidos);
+            }
+            if(boletos2Dias > 0) {
+                diasElegidos.push('viernes', 'sabado');
+                console.log(diasElegidos);
+            }
+            if(boletosCompletos > 0) {
+                diasElegidos.push('viernes','sabado','domingo');
+                console.log(diasElegidos);
+            }
+            for(var i = 0; i < diasElegidos.length; i++) {
+                document.getElementById(diasElegidos[i]).style.display = 'block';
+            }
         }
 
         
 
     }); // DOM CONTENT LOADED
 })();
+
+
+$(function() {
+    // alert("funciona");
+    $('.ocultar').hide();
+    // programa de conferencias
+    $('.programa-evento .info-curso:first').show();
+    // para que al cargar por primera vez la página, se muestre al menos la primera seccion
+    $('.menu-programa a:first').addClass('activo');
+    $('.menu-programa a').on('click', function() {
+        // quitamos la clase "activo" a todos los enlaces
+        $('.menu-programa a').removeClass('activo');
+        // agrega la clase "activo SOLO al que se le dio click"
+        $(this).addClass('activo');
+        $('.ocultar').hide();
+        var enlace = $(this).attr('href');
+        // console.log(enlace);
+        $(enlace).fadeIn(1000);
+        return false;
+    })
+});
