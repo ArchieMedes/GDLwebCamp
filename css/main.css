@@ -150,7 +150,7 @@ ul {
 }
 
 .contenedor {
-  max-width: 992px;
+  max-width: 1080px;
   margin: 0 auto;
   width: 90%;
 }
@@ -179,6 +179,46 @@ ul {
 }
 
 /* ------------------------------- HEADER ----------------------------------- */
+/* LETTERING ENCABEZADO */
+.nombre-sitio span {
+  position: relative;
+  text-shadow: 0 0 30px black; /* X Y pxDEblur COLOR DE SOMBRA */
+
+}
+
+@media (min-width: 992px) {
+  .char1 {
+    top: 20px; right:0px;
+  }
+  .char2 {
+    top: 0px; right:-5px;
+  }
+  .char3 {
+    top: 10px; right:20px;
+  }
+  .char4 {
+    top: 5px; right:10px;
+  }
+  .char5 {
+    top: 15px; right:10px;
+  }
+  .char6 {
+    top: 5px; right:5px;
+  }
+  .char7 {
+    top: 20px; right:-5px;
+  }
+  .char8 {
+    top: 0px; right:10px;
+  }
+  .char9 {
+    top: 10px; right:20px;
+  }
+  .char10 {
+    top: 20px; right:20px;
+  }
+
+}
 
 .hero {
   background-image: url(../img/encabezado.jpg);
@@ -276,6 +316,14 @@ ul {
   padding: 2rem 0;
 }
 
+.fixed {
+  position: fixed;
+  width: 100%; /* el fixed cambia el ancho, por tanto 100% para evitar efectos no deseados*/
+  top: 0; /* esta y la siguiente linea SON NECESARIAS para decirle al CSS dónde quiero fijar mi barra */
+  left: 0;
+  z-index: 2; /* esta línea es para que la barra esté por encima de todos los elementos en el sitio */
+}
+
 .logo {
   width: 80%;
   float: left;
@@ -297,6 +345,7 @@ ul {
 
 .navegacion-principal {
   display: none; /* ESTO ES PARA OCULTARLO */
+  width: 100%; /* para que el toggle se vea fluido */
 }
 
 
@@ -897,6 +946,17 @@ blockquote i {
 }
 
 /* ---------------------------------- PÁGINAS INTERNAS ------------------------------ */
+
+/* ------------ CONFERENCIA.HTML */
+
+.conferencia .navegacion-principal .activo {
+  border-bottom: 2px solid #fe4918;
+}
+
+.galeria a {
+  display: inline-block;
+  margin-bottom: .5rem;
+}
 
 /* ------------ REGISTRO.HTML */
 .paquetes > h3 {
