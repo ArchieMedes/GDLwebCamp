@@ -208,8 +208,8 @@ $(function() {
     var barraAltura = $('.barra').innerHeight(); // cuano mide la barra de alto
     // console.log(barraAltura);
 
-    $(window).scroll(function() { // sto va a escuchar el scroll en la ventana
-        var scroll = $(window).scrollTop(); // esta línea es necesaia para detectar el scrolling
+    $(window).scroll(function() { // esto va a escuchar el scroll en la ventana
+        var scroll = $(window).scrollTop(); // esta línea es necesaria para detectar el scrolling
         // console.log(scroll);
         if( scroll > windowHeight) {
             // console.log("ya rebasaste la altura de la pantalla");
